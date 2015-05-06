@@ -12,7 +12,7 @@ Students will be able to
 5. Run `cd Development` (This navigates within the Development directory)
 
 
-## Indivual Exercises
+## Individual Exercises (Set 1)
 1. Create a folder under Development called PythonNinja
 2. Create a file called exercise_1.py using the `touch` command, e.g. `touch test.py` will create a folder in the current directory.
 3. Open that file in Sublime.
@@ -36,11 +36,11 @@ Then we'll follow these steps: (>>> indicates we're in the Python shell, you don
 >>> say_hello("Cercei")
 ```
 
-## Individual Exercises
+## Individual Exercises (Set 2)
 1. What is happening in the `import` line?
 2. What is happening in the second line?
 
-## Individual Exercise
+## Individual Exercise (Set 3)
 1. Go back to exercise_1.py and change the "Hello, " to "Hey, "
 2. Go back to the shell and run the `say_hello` call again. Has it updated?
 3. Exit the shell using `>>> exit()` and reopen the shell
