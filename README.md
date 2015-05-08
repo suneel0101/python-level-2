@@ -6,7 +6,7 @@ Students will be able to
 
 # New Workflow
 
-**15 minutes**
+*15 minutes*
 
 1. Get a text editor. [Sublime](http://www.sublimetext.com/) is great.
 2. Open Terminal
@@ -23,7 +23,7 @@ Students will be able to
 
 ## Together Exercises
 
-**15 minutes**
+*15 minutes*
 
 Type (NOT copy and paste) the following code into the `exercise_1.py` file and save (Cmd + S)
 
@@ -62,9 +62,9 @@ Then we'll follow these steps: (>>> indicates we're in the Python shell, you don
 These exercises will help us write clean, modular functions.
 
 ## Individual Exercises (Set 4)
-*Objective*: Review the syntax of a function.
+**Objective**/g: Review the syntax of a function.
 
-**10 minutes**
+*10 minutes*
 
 1. Create a new file under PythonNinja called even_utils.py
 2. In function_practice.py, write a function called `is_even` which will take an integer and return True if it's even, False otherwise.
@@ -72,7 +72,7 @@ These exercises will help us write clean, modular functions.
 
 ## Code Review Workflow
 
-**5 minutes**
+*5 minutes*
 
 1. Sign into this hipchat url: https://www.hipchat.com/geDHwPme2
 2. Go to gist.github.com
@@ -82,9 +82,9 @@ These exercises will help us write clean, modular functions.
 6. Paste it into the chat
 
 ## Partner Exercises (Set 5)
-*Objective*: Combine the use of functions; practice loops; use import statements.
+**Objective**/g: Combine the use of functions; practice loops; use import statements.
 
-**15 minutes**
+*15 minutes*
 
 1. Under PythonNinja, create a new file called function_practice.py
 2. In this file, write a function called `filter_out_odds` which takes one argument, called `numbers`. (Remember our for loops from the intro class). This function will return a sublist of the original `numbers` list containing only those numbers which are even. `filter_out_odds` should make use of the `is_even` function, *HINT*: You'll have to import `is_even` from `even_utils.py`. 
@@ -92,7 +92,7 @@ These exercises will help us write clean, modular functions.
 
 # A Bit More on Import Statements
 
-**10 minutes**
+*10 minutes*
 
 Open the python shell from under PythonNinja.
 
@@ -125,7 +125,7 @@ What happens?
 
 # Let's Learn How to Read/Write Files
 
-**15 minutes**
+*15 minutes*
 
 ## The `with` statement
 Useful when you have a pair of operations you want to execute, one at the beginning and one at the end and in between you want to run some code.
@@ -164,7 +164,7 @@ We will now deal with ths `csv` library, which is a super useful built-in librar
 
 ## Documentation Exercise (Set 8)
 
-**10 minutes**
+*10 minutes*
 
 Documentation is your friend. You'll often need to Google and look up the functions that are available to you, their syntax, etc, so let's cultivate that skill.
 
@@ -175,9 +175,9 @@ Documentation is your friend. You'll often need to Google and look up the functi
 
 ## Together Exercise (Set 9)
 
-**10 minutes**
+*10 minutes*
 
-*Objective*: First pass at using the `csv` library; learn how to run python scripts from the terminal.
+**Objective**/g: First pass at using the `csv` library; learn how to run python scripts from the terminal.
 1. Create a new file called `create_movies_csv.py` 
 2. Type (DON'T COPY PASTE!) the code below.
 3. In the terminal under PythonNinja, run `python create_movies_csv.py`
