@@ -219,7 +219,7 @@ Anaconda, Nicki Minaj
 
 **Objective**: Learn how to read files using the `csv` library. 
 
-0. Download [this csv file of movie data]() and move it under the PythonNinja directory.
+0. Download [this csv file of movie data](https://s3.amazonaws.com/python-level-2/film.csv) and move it under the PythonNinja directory.
 0. Open this file in Sublime to see what it looks like.
 1. When you type `ls` into the Terminal under PythonNinja, you should see `film.csv`
 1. Create a new file called `movie_reader.py`
