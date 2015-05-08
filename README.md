@@ -62,9 +62,9 @@ Then we'll follow these steps: (>>> indicates we're in the Python shell, you don
 These exercises will help us write clean, modular functions.
 
 ## Individual Exercises (Set 4)
-**Objective**/g: Review the syntax of a function.
+**Objective**: Review the syntax of a function.
 
-*10 minutes*
+*15 minutes*
 
 1. Create a new file under PythonNinja called even_utils.py
 2. In function_practice.py, write a function called `is_even` which will take an integer and return True if it's even, False otherwise.
@@ -72,7 +72,7 @@ These exercises will help us write clean, modular functions.
 
 ## Code Review Workflow
 
-*5 minutes*
+*7 minutes*
 
 1. Sign into this hipchat url: https://www.hipchat.com/geDHwPme2
 2. Go to gist.github.com
@@ -82,7 +82,7 @@ These exercises will help us write clean, modular functions.
 6. Paste it into the chat
 
 ## Partner Exercises (Set 5)
-**Objective**/g: Combine the use of functions; practice loops; use import statements.
+**Objective**: Combine the use of functions; practice loops; use import statements.
 
 *15 minutes*
 
@@ -177,7 +177,7 @@ Documentation is your friend. You'll often need to Google and look up the functi
 
 *10 minutes*
 
-**Objective**/g: First pass at using the `csv` library; learn how to run python scripts from the terminal.
+**Objective**: Learn how to write files using the `csv` library; learn how to run python scripts from the terminal.
 1. Create a new file called `create_movies_csv.py` 
 2. Type (DON'T COPY PASTE!) the code below.
 3. In the terminal under PythonNinja, run `python create_movies_csv.py`
@@ -187,12 +187,105 @@ Documentation is your friend. You'll often need to Google and look up the functi
 import csv
 
 with open('movies.csv', 'wb') as csvfile:
-    movie_writer = csv.writer(csvfile, delimiter=';')
+    movie_writer = csv.writer(csvfile)
     # Write the headers to the file
     headers = ['Name', "IMDB', 'ReleaseYear']
     movie_writer.writerow(headers)
     # Write two rows of movies
     movie_writer.writerow(["Top Gun", 6.8, 1986])
     movie_writer.writerow(["The Usual Suspects", 8.7, 1995])
+```
+
+## Individual Exercises (Set 10)
+
+*12 minutes*
+
+1. Create a new file called `create_songs_csv.py` 
+2. It should create a csv file called `songs.csv`
+3. This file should contain five rows, the first being its header, with colum names `Title`, `Artist`
+4. The other four rows should be the following four records
+5. Run `python create_songs_csv.py` from the Terminal and open the `songs.csv` file to verify it worked.
+
+``` 
+Blank Space, Taylor Swift
+Young and Beautiful, Lana del Ray
+Anaconda, Nicki Minaj
+0 to 100, Drake
+```
+
+## Together Exercise (Set 11)
+
+*15 minutes*
+
+**Objective**: Learn how to read files using the `csv` library. 
+
+0. Download [this csv file of movie data]() and move it under the PythonNinja directory.
+0. Open this file in Sublime to see what it looks like.
+1. When you type `ls` into the Terminal under PythonNinja, you should see `film.csv`
+1. Create a new file called `movie_reader.py`
+2. Type the code below and save the file. 
+
+Code:
+```
+import csv
+
+def read_movies():
+    with open('film.csv', 'rb') as f:
+        reader = csv.reader(f, delimiter=';')
+        rows = [row for row in reader]
+    # Question: why am I splitting the 0th row from the rest?
+   return rows[0], rows[1:] 
+```
+
+In the Python shell:
+```
+>>> from movie_reader import read_movies
+>>> headers, movies = read_movies()
+>>> len(movies)
+>>> movies[0]
+>>> headers
+```
+
+## Individual Exercises (Set 12)
+
+*15 minutes*
+
+1. In `movie_reader.py`, write another function that takes one argument `movies`, which will be a list of rows from the csv file. This function should be called `get_short_movies` and should return a subset of movies that have duration less than 120 minutes
+2. Test that it works by running the following in the shell 
+
+```
+>>> from movie_reader import read_movies, get_short_movies
+>>> headers, movies = read_movies()
+>>> short_movies = get_short_movies(movies)
+>>> len(short_movies)
+>>> short_movies[:3]
+```
+
+# Let's Learn to Use the `random` Library!
+**Objective**: Test your ability to learn from documentation.
+
+## Individual Exercises (Set 13)
+1. Google "python random"
+2. Check out the official documentation
+3. Use the `random.choice` function to randomly choose an element of the below list.
+
+```
+movies = [("The Usual Suspects", 111), ("Never Say Never, 142), ("The Matrix", 181)]
+```
+
+# Back to Our Movie Data
+
+## Partner Exercises (Set 14)
+
+*10 minutes*
+
+1. Use your knowledge of the random library and write a function called `recommend_from` that takes a list of rows and randomly choose one from the list.
+2. Confirm that it works by running the following in the shell:
+
+```
+>>> from movie_reader import read_movies, get_short_movies, recommend_from
+>>> headers, movies = read_movies()
+>>> short_movies = get_short_movies(movies)
+>>> recommend_from(short_movies)
 ```
 
