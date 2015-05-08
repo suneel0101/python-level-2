@@ -99,16 +99,68 @@ Then, type the following:
 ## Partner Exercise (Set 6)
 1. Turn to a partner and explain what is happening in these two different import examples.
 
+# Let's Learn How to Read/Write Files
+
+## The `with` statement
+Useful when you have a pair of operations you want to execute, one at the beginning and one at the end and in between you want to run some code.
+
+The classic example is this:
+
+1. Open a file
+2. Do stuff with the contents of that file
+3. Close the file
+
+## Code example
+```python
+# The 'wb' is the mode that we're opening the file in. w=write, b=binary (encoding).
+# The 'rb' mode is read-binary
+with open('data.txt', 'wb') as f:
+    f.write('Hey friends!')
+```
+Let's open that file in Sublime. It should be under PythonNinja.
+
+Here is the same code, without the use of `with`.
+
+```python
+f = open('data.txt', 'wb')
+f.write('Hey friends!')
+f.close()
+```
+Usually leaving out `.close()` won't result in a problem, but there are weird edgecases depending on your system where it result in some issues, so if we know that we're always going to call the `close()` method, then we might as well use `with`.
+
+## Individual Exercises (Set 7)
+1. Write the numbers 1 thru 1000 to a file called `numbers.txt`
+
 # Let's Learn How to Use Existing Libraries
 Code libraries are directories of code that other developers have written and made accessible to us. Some of these libraries are built into Python and others we have to install.
 
 We will now deal with ths `csv` library, which is a super useful built-in library.
 
-## Documentation Exercise (Set 7)
+## Documentation Exercise (Set 8)
 Documentation is your friend. You'll often need to Google and look up the functions that are available to you, their syntax, etc, so let's cultivate that skill.
 
 1. Open your web browser
 2. Google "csv python"
 3. The first result should be the official docs. Click on it.
+4. With a partner, read through the documentation and example for `csv.reader` and `csv.writer`. What do they do?
 
+## Together Exercise (Set 9)
+*Objective*: First pass at using the `csv` library; learn how to run python scripts from the terminal.
+1. Create a new file called `create_movies_csv.py` 
+2. Type (DON'T COPY PASTE!) the code below.
+3. In the terminal under PythonNinja, run `python create_movies_csv.py`
+4. What datatype does the `.writerow` method take?
+
+```python
+import csv
+
+with open('movies.csv', 'wb') as csvfile:
+    movie_writer = csv.writer(csvfile, delimiter=';')
+    # Write the headers to the file
+    headers = ['Name', "IMDB', 'ReleaseYear']
+    movie_writer.writerow(headers)
+    # Write two rows of movies
+    movie_writer.writerow(["Top Gun", 6.8, 1986])
+    movie_writer.writerow(["The Usual Suspects", 8.7, 1995])
+```
 
