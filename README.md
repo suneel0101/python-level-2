@@ -58,7 +58,7 @@ These exercises will help us write clean, modular functions.
 ## Individual Exercises (Set 4)
 *Objective*: Review the syntax of a function.
 
-1. Create a new file under PythonNinja called function_practice.py
+1. Create a new file under PythonNinja called even_utils.py
 2. In function_practice.py, write a function called `is_even` which will take an integer and return True if it's even, False otherwise.
 3. Open the python shell and import `is_even`. Test the function on these values: 3, -2, 0, 2000. Did it work as expected?
 
@@ -70,10 +70,45 @@ These exercises will help us write clean, modular functions.
 5. Copy the browser url
 6. Paste it into the chat
 
-## Individual Exercises (Set 5)
-*Objective*: Combine the use of functions; practice loops.
+## Partner Exercises (Set 5)
+*Objective*: Combine the use of functions; practice loops; use import statements.
 
-1. In function_practice.py, write a new function called `filter_out_odds` which takes one argument, called `numbers`. (Remember our for loops from the intro class). This function will return a sublist of the original `numbers` list containing only those numbers which are even. `filter_out_odds` should make use of the `is_even` function. 
-2. Open the python shell, import `filter_out_odds` and test the function on these inputs: `[1, 3, 6, 8, -20]` and then on `range(2, 350)`. Did it work?
+1. Under PythonNinja, create a new file called function_practice.py
+2. In this file, write a function called `filter_out_odds` which takes one argument, called `numbers`. (Remember our for loops from the intro class). This function will return a sublist of the original `numbers` list containing only those numbers which are even. `filter_out_odds` should make use of the `is_even` function, *HINT*: You'll have to import `is_even` from `even_utils.py`. 
+3. Open the python shell, import `filter_out_odds` and test the function on these inputs: `[1, 3, 6, 8, -20]` and then on `range(2, 350)`. Did it work?
+
+# A Bit More on Import Statements
+
+Open the python shell from under PythonNinja.
+
+Then, type the following:
+```
+>>> import function_practice
+>>> nums = range(30)
+>>> function_practice.filter_out_odds(nums)
+```
+
+Now exit the shell and reopen the shell.
+
+Then, type the following:
+```
+>>> from function_practice import filter_out_odds
+>>> filter_out_odds([1, 3, 2, 8])
+```
+
+## Partner Exercise (Set 6)
+1. Turn to a partner and explain what is happening in these two different import examples.
+
+# Let's Learn How to Use Existing Libraries
+Code libraries are directories of code that other developers have written and made accessible to us. Some of these libraries are built into Python and others we have to install.
+
+We will now deal with ths `csv` library, which is a super useful built-in library.
+
+## Documentation Exercise (Set 7)
+Documentation is your friend. You'll often need to Google and look up the functions that are available to you, their syntax, etc, so let's cultivate that skill.
+
+1. Open your web browser
+2. Google "csv python"
+3. The first result should be the official docs. Click on it.
 
 
