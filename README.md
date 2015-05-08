@@ -23,6 +23,10 @@ Copy and paste the following code into the `exercise_1.py` file and save (Cmd + 
 
 ```python
 def say_hello(name):
+    """
+    This function takes a name (string) and prints
+    a personalized greeting.
+    """
     print "Hello, " + name + "!"
 ```
 
@@ -46,5 +50,30 @@ Then we'll follow these steps: (>>> indicates we're in the Python shell, you don
 3. Exit the shell using `>>> exit()` and reopen the shell
 4. Run the same two lines (the import and the `say_hello` call) and see that it has updated.
 
+
+# Let's Up Our Function-Writing Skills
+
+These exercises will help us write clean, modular functions.
+
+## Individual Exercises (Set 4)
+*Objective*: Review the syntax of a function.
+
+1. Create a new file under PythonNinja called function_practice.py
+2. In function_practice.py, write a function called `is_even` which will take an integer and return True if it's even, False otherwise.
+3. Open the python shell and import `is_even`. Test the function on these values: 3, -2, 0, 2000. Did it work as expected?
+
+## Code Review Workflow
+1. Sign into this hipchat url: https://www.hipchat.com/geDHwPme2
+2. Go to gist.github.com
+3. Paste your code for `is_even` into the text body area
+4. Click `Create secret gist`
+5. Copy the browser url
+6. Paste it into the chat
+
+## Individual Exercises (Set 5)
+*Objective*: Combine the use of functions; practice loops.
+
+1. In function_practice.py, write a new function called `filter_out_odds` which takes one argument, called `numbers`. (Remember our for loops from the intro class). This function will return a sublist of the original `numbers` list containing only those numbers which are even. `filter_out_odds` should make use of the `is_even` function. 
+2. Open the python shell, import `filter_out_odds` and test the function on these inputs: `[1, 3, 6, 8, -20]` and then on `range(2, 350)`. Did it work?
 
 
