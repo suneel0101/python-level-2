@@ -1,8 +1,8 @@
 # Objectives
 Students will be able to
 - write reusable functions with ease
-- use classes and object-oriented programming to encapsulate their logic
-- comfortably use existing Python libraries, like the `csv` library
+- comfortably use existing Python libraries, like the `csv` and `random` libraries
+- write scripts and execute them in the terminal or interact with them in the python shell
 
 # New Workflow
 
@@ -289,4 +289,23 @@ movies = [("The Usual Suspects", 111), ("Never Say Never, 142), ("The Matrix", 1
 >>> short_movies = get_short_movies(movies)
 >>> recommend_from(short_movies)
 ```
+# A Quick Look at Classes
+```python
+class MovieHelper(object):
+    def __init__(self):
+        self.movies = self.read_movies()
+   
+    def read_movies(self):
+        ...
 
+    def get_short_movies(self):
+        ...
+
+    def recommend_from(self, params): 
+        ...
+```
+
+# Next Steps
+1. [Classes](http://learnpythonthehardway.org/book/ex40.html) (object-oriented programming)
+2. Build an app using Django or Flask
+3. Do a ton of [Euler](http://projecteuler.net) problems
