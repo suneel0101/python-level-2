@@ -178,6 +178,7 @@ Documentation is your friend. You'll often need to Google and look up the functi
 *10 minutes*
 
 **Objective**: Learn how to write files using the `csv` library; learn how to run python scripts from the terminal.
+
 1. Create a new file called `create_movies_csv.py` 
 2. Type (DON'T COPY PASTE!) the code below.
 3. In the terminal under PythonNinja, run `python create_movies_csv.py`
